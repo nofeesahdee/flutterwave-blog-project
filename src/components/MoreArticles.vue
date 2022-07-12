@@ -3,7 +3,7 @@
     export default {
         data () {
             return{
-                blogs:[]
+                blogs:[{},{},{}]
             }
         },
         mounted(){
@@ -17,6 +17,7 @@
 
 <template>
     <div v-if="blogs.length" class="blog-container">
+        <h5>More Articles</h5>
         <div v-for="blog in blogs" :key="blog.id" class="blog-card">
             <img src="./icon/techcrunch.png" alt="techcrunch" class="card-header-image">
             <div class="blog-text">
@@ -40,12 +41,12 @@
             </div>
         </div>
     </div>
-    <div v-else class="loading">
-        Loading Blog Posts...
-    </div>
 </template>
 
 <style scoped>
+h5{
+    display: block;
+}
 .blog-container{
     display:flex;
     flex-wrap: wrap;

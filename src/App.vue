@@ -1,11 +1,12 @@
 <script setup>
-import Header from './components/Header.vue';
-// import { router-view } from 'vue-router';
+import HeadSection from './components/HeadSection.vue';
 </script>
 
 <template>
- <header>
-    <Header />
-  </header>
-  <!-- <router-view /> -->
+  <div class="container">
+    <header>
+      <HeadSection />
+    </header>
+    <router-view />
+  </div>
 </template>

@@ -1,20 +1,20 @@
 <script>
-import Header from '../components/Header.vue';
-import BlogPosts from '../components/BlogPosts.vue';
+import BlogPosts from '@/components/BlogPosts.vue';
 
 export default{
-    props: ['id'],
-    data(){
-        return{
+    props: ["id"],
+    data() {
+        return {
             blog: null
-        }
+        };
     },
-     mounted(){
-        fetch('https://techcrunch.com/wp-json/wp/v2/posts/' + this.id)
-        .then(response => response.json())
-        .then(data => this.blog = data)
-        .catch(error => console.log(error.message))
+    mounted() {
+        fetch("https://techcrunch.com/wp-json/wp/v2/posts/" + this.id)
+            .then(response => response.json())
+            .then(data => this.blog = data)
+            .catch(error => console.log(error.message));
     },
+    components: { BlogPosts }
 }
 </script>
 
@@ -22,12 +22,12 @@ export default{
     <div v-if="blog" class="blog-details">
         <h1 v-html="blog.title.rendered" ></h1>
         <p v-html="blog.content.rendered"></p>
-        
+        <h5> More Articles</h5>
+        <BlogPosts/>
     </div>
     <div v-else class="loading">
         <p>Loading Blog Details...</p>
     </div>
-    <BlogPosts />
 </template>
 
 <style scoped>
@@ -53,5 +53,9 @@ h1{
     justify-content: center;
     align-items: center;
     font-size: 28px;
+}
+h5{
+    margin-top: 60px;
+    font-size: 24px;
 }
 </style>
