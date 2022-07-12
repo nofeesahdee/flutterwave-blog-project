@@ -47,6 +47,7 @@ h1{
     color:#6E6E6E;
     word-spacing: 2px;
     font-size: 18px;
+    min-width: 350px;
 }
 .loading{
     display: flex;
