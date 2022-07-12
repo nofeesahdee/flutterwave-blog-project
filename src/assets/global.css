@@ -10,8 +10,9 @@ body{
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
 }
-#app{
+.container{
   max-width: 1144px;
+  margin: 0 10px;
 }
 header,
 main,
@@ -24,7 +25,6 @@ a{
 /* The footer section */
 footer{
   text-align: center;
-  padding-bottom: 227px;
   display: flex;
   justify-content: center;
 }

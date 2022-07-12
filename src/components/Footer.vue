@@ -65,29 +65,36 @@ export default {
 </template>
 
 <style scoped>
-    h4{
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 12px;
-    }
-    p{
-        color:#6E6E6E;
-        font-size: 22px;
-        max-width: 741px;
-        margin-bottom: 35px;
-        text-align: center;
-    }
-    button{
-        background-color: black;
-        color: #ffffff;
-        text-transform: uppercase;
-        border: none;
-        font-size: 18px;
-        width: 117px;
-        height: 45px;
-        cursor: pointer;
-    }
-    button:hover{
-        transform: scale(1.1);
-    }
+  .footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 227px;
+  }
+  h4{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  p{
+    color:#6E6E6E;
+    font-size: 22px;
+    max-width: 741px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  button{
+    background-color: black;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    font-size: 18px;
+    width: 117px;
+    height: 45px;
+    cursor: pointer;
+  }
+  button:hover{
+    transform: scale(1.1);
+  }
 </style>
