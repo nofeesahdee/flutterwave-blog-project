@@ -1,4 +1,5 @@
 <script>
+// import BlogDetails from '@/views/BlogDetails.vue';
     // import { RouterLink } from 'vue-router'
     export default {
         data () {
@@ -12,6 +13,7 @@
             .then(data => this.blogs = data)
             .catch(error => console.log(error.message))
         },
+       
     }
 </script>
 
@@ -31,7 +33,7 @@
                 <div class="blog-link">
                     <span>10 min read</span>
                     <RouterLink :to="{name: 'BlogDetails', params: {id: blog.id}}">
-                        <button>
+                        <button @click="scrollToTop()">
                             Read More
                             <img src="./icon/arrow.svg" alt="arrow">
                         </button>

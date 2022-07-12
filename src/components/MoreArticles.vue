@@ -12,12 +12,18 @@
             .then(data => this.blogs = data)
             .catch(error => console.log(error.message))
         },
+         methods:{
+            scrollToTop(){
+                window.scrollTo(0,0);
+                // window.location.reload();
+                this.$router.go()
+            }
+        },
     }
 </script>
 
 <template>
     <div v-if="blogs.length" class="blog-container">
-        <h5>More Articles</h5>
         <div v-for="blog in blogs" :key="blog.id" class="blog-card">
             <img src="./icon/techcrunch.png" alt="techcrunch" class="card-header-image">
             <div class="blog-text">
@@ -32,7 +38,7 @@
                 <div class="blog-link">
                     <span>10 min read</span>
                     <RouterLink :to="{name: 'BlogDetails', params: {id: blog.id}}">
-                        <button>
+                        <button  @click="scrollToTop()">
                             Read More
                             <img src="./icon/arrow.svg" alt="arrow">
                         </button>

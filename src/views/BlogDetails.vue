@@ -1,5 +1,5 @@
 <script>
-import BlogPosts from '@/components/BlogPosts.vue';
+import MoreArticles from '@/components/MoreArticles.vue';
 
 export default{
     props: ["id"],
@@ -14,7 +14,7 @@ export default{
             .then(data => this.blog = data)
             .catch(error => console.log(error.message));
     },
-    components: { BlogPosts }
+    components: { MoreArticles }
 }
 </script>
 
@@ -23,7 +23,7 @@ export default{
         <h1 v-html="blog.title.rendered" ></h1>
         <p v-html="blog.content.rendered"></p>
         <h5> More Articles</h5>
-        <BlogPosts/>
+        <MoreArticles />
     </div>
     <div v-else class="loading">
         <p>Loading Blog Details...</p>
