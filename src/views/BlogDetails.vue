@@ -59,4 +59,9 @@ h5{
     margin-top: 60px;
     font-size: 24px;
 }
+@media (max-width:375px) {
+ .blog-details{
+  width: 350px;
+ }
+}
 </style>
