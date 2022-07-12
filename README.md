@@ -1,24 +1,6 @@
 # flutterwave-blog-project
 
-## Project setup
-```
-npm install
-```
+## WORTHY OF NOTE 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+` I had to learn vue in 24 hrs in order to build out the project`
+`Also i was building with vue3, but flutterwave payment gateway isn't working on vue3, so I had to revert back to vue2 after spending hours trying to fix what is not broken`
